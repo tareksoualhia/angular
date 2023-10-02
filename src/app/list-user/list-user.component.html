@@ -1,0 +1,32 @@
+<!-- src/app/list-user/list-user.component.html -->
+
+<h1>Liste des Utilisateurs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Prénom</th>
+      <th>Nom</th>
+      <th>Date de Naissance</th>
+      <th>Email</th>
+      <th>Profession</th>
+      <th>Catégorie de Compte</th>
+      <!-- Ajoutez d'autres en-têtes de colonnes si nécessaire -->
+    </tr>
+  </thead>
+  
+  <tbody>
+    <tr *ngFor="let user of list">
+      <td>{{ user.idCustomer }}</td>
+      <td>{{ user.firstName }}</td>
+      <td>{{ user.lastName }}</td>
+      <td>{{ user.birthDate }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.profession }}</td>
+      <td>{{ user.accountCategory }}</td>
+      <button class="btn btn-danger" onclick="deleteUser(1)">Delete</button>
+      <!-- Affichez d'autres propriétés de l'utilisateur si nécessaire -->
+    </tr>
+  </tbody>
+</table>
